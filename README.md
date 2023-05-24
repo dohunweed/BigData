@@ -17,35 +17,4 @@ BigData work
     
     
     
-코드 예제
-import re
-// 문자열 매치
-pattern = r"apple"
-text = "I have an apple"
-match = re.search(pattern, text)
-if match:
-    print("매치되었습니다!")
-else:
-    print("매치되지 않았습니다.")
 
-// 패턴 추출
-pattern = r"(\d+)-(\d+)-(\d+)"
-text = "Date: 2023-05-24"
-match = re.search(pattern, text)
-if match:
-    year = match.group(1)
-    month = match.group(2)
-    day = match.group(3)
-    print(f"Year: {year}, Month: {month}, Day: {day}")
-
-// 패턴 대체
-pattern = r"apple"
-text = "I have an apple. It's an apple tree."
-replaced_text = re.sub(pattern, "orange", text)
-print(replaced_text)
-
-// 패턴 분할
-pattern = r"\s+"
-text = "Hello    World"
-splitted_text = re.split(pattern, text)
-print(splitted_text)
