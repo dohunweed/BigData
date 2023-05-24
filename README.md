@@ -16,10 +16,10 @@ BigData work
     () : 그룹을 나타내며, 그룹에 매치된 문자열을 추출할 수 있습니다.
     
     
+    
 코드 예제
 import re
-
-# 문자열 매치
+// 문자열 매치
 pattern = r"apple"
 text = "I have an apple"
 match = re.search(pattern, text)
@@ -28,7 +28,7 @@ if match:
 else:
     print("매치되지 않았습니다.")
 
-# 패턴 추출
+// 패턴 추출
 pattern = r"(\d+)-(\d+)-(\d+)"
 text = "Date: 2023-05-24"
 match = re.search(pattern, text)
@@ -38,13 +38,13 @@ if match:
     day = match.group(3)
     print(f"Year: {year}, Month: {month}, Day: {day}")
 
-# 패턴 대체
+// 패턴 대체
 pattern = r"apple"
 text = "I have an apple. It's an apple tree."
 replaced_text = re.sub(pattern, "orange", text)
 print(replaced_text)
 
-# 패턴 분할
+// 패턴 분할
 pattern = r"\s+"
 text = "Hello    World"
 splitted_text = re.split(pattern, text)
